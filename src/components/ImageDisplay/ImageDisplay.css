@@ -1,0 +1,43 @@
+.outer-box {
+  background-color: rgb(242, 250, 255);
+}
+.images {
+  width: 600px;
+}
+
+.all-images {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.add-comment {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.add-comment {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.edit-comment {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.edit-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.delete-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
