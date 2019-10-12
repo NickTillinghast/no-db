@@ -1,38 +1,16 @@
 import React, { Component } from "react";
-import "./ImageDisplay.css";
 import axios from "axios";
-import AddComment from "../AddComment/AddComment";
-import Comments from "../Comments/Comment";
-export default class ImageDisplay extends Component {
+
+export default class AddComment extends Component {
   constructor(props) {
     super(props);
     this.state = {
       allPhotos: [],
       comment: ""
     };
-    this.getAllPhotos = this.getAllPhotos.bind(this);
     this.addComment = this.addComment.bind(this);
-    this.deleteComment = this.deleteComment.bind(this);
-    this.editComment = this.editComment.bind(this);
   }
-  componentDidMount() {
-    this.getAllPhotos();
-  }
-  getAllPhotos() {
-    axios
-      .get("/api/all_photos")
-      .then(response => {
-        this.setState({
-          allPhotos: response.data
-        });
-      })
-      .catch(err => console.log(err));
-  }
-  updateText(newComment) {
-    this.setState({
-      comment: newComment
-    });
-  }
+
   addComment(comment, index) {
     const newComment = { newComment: comment };
     axios
@@ -45,42 +23,17 @@ export default class ImageDisplay extends Component {
       });
   }
 
-  deleteComment(comment, index) {
-    const indexToDelete = { indexToDelete: comment };
-    axios
-      .delete(
-        `/api/delete_comment/${this.state.allPhotos[index].id}`,
-        indexToDelete
-      )
-      .then(response => {
-        this.setState({ allPhotos: response.data });
-      });
-  }
-
-  editComment(comment, index) {
-    const indexToEdit = { newComment: comment };
-    const editComment = { editComment: comment };
-    axios
-      .editComment(`/api/edit_comment/${this.state.allPhotos[index].id}`, {
-        indexToEdit,
-        editComment
-      })
-      .then(response => {
-        this.setState({ allPhotos: response.data });
-      });
+  updateText(newComment) {
+    this.setState({
+      comment: newComment
+    });
   }
 
   render() {
     const { allPhotos } = this.state;
     const { comment } = this.state.comment;
     const mappedPhotos = allPhotos.map((photo, index) => {
-      //   const myComments = photo.comment.map(c => <Comment comment={c}>)
-
-      //   return (
-      //     <div>
-      //       <AddComment/>
-      //       {myComments}
-      //     </div>
+      // const myComments = photo.comment.map(c => <div></div>)
 
       return (
         <div key={photo.id} className="outer-box">
@@ -88,7 +41,6 @@ export default class ImageDisplay extends Component {
             <img className="images" src={photo.image} alt="" />
           </div>
           <section>
-            <Comments addCommentfn={this.addComment} />
             <div className="textArea">{/* <TextContainer /> */}</div>
             <div className="add-comment">
               <input
@@ -122,13 +74,28 @@ export default class ImageDisplay extends Component {
         </div>
       );
     });
+
     console.log(this.state.allPhotos);
     return (
       <div className="image-display">
-        <AddComment />
         <div className="printed-text">{this.state.comment}</div>
         <div>{mappedPhotos}</div>
       </div>
     );
   }
 }
+
+/*
+...
+
+
+
+render() {
+  return <div>
+    <h1>{name}</h1?
+    <p>{comment}</p>
+    <button onClick={() => this.props.deletefn(comment, this.index)}> DeleteBtn</button>
+  </div>
+}
+
+*/

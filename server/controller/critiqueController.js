@@ -20,6 +20,7 @@ module.exports = {
   addComment: (req, res, next) => {
     const { id } = req.params;
     const { newComment } = req.body;
+    console.log(newComment);
     const index = photoData.findIndex(text => {
       return text.id === parseInt(id);
     });
