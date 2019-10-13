@@ -20,7 +20,7 @@ module.exports = {
   addComment: (req, res, next) => {
     const { id } = req.params;
     const { newComment } = req.body;
-    console.log(newComment);
+    // console.log(newComment);
     const index = photoData.findIndex(text => {
       return text.id === parseInt(id);
     });
@@ -46,12 +46,12 @@ module.exports = {
   },
   editComment: (req, res, next) => {
     const { id } = req.params;
-    const { indexToEdit, editComment } = req.body;
+    const { indexToEdit, editedComment } = req.body;
     const index = photoData.findIndex(photo => {
       return photo.id === parseInt(id);
     });
     if (index !== -1) {
-      photoData[index].comment.splice(indexToEdit, 1, editComment);
+      photoData[index].comment[indexToEdit] = editedComment;
       res.status(200).send(photoData);
     } else {
       res.status(404).send("no comment available");

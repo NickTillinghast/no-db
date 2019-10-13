@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./ImageDisplay.css";
 import axios from "axios";
-import AddComment from "../AddComment/AddComment";
-import Comments from "../Comments/Comment";
+import Photo from "../Photo/Photo";
+// import Comment from "../Comment/Comment";
+
 export default class ImageDisplay extends Component {
   constructor(props) {
     super(props);
@@ -34,99 +35,56 @@ export default class ImageDisplay extends Component {
     });
   }
   addComment(comment, index) {
-    const newComment = { newComment: comment };
     axios
-      .post(`/api/add_comment/${this.state.allPhotos[index].id}`, newComment)
+      .post(`/api/add_comment/${index}`, {
+        newComment: comment
+      })
+
       .then(response => {
         this.setState({
           allPhotos: response.data
-          // comment: ""
         });
       });
   }
 
-  deleteComment(comment, index) {
-    const indexToDelete = { indexToDelete: comment };
+  deleteComment(indexToDelete, index) {
     axios
-      .delete(
-        `/api/delete_comment/${this.state.allPhotos[index].id}`,
+      .delete(`/api/delete_comment/${index}`, {
         indexToDelete
-      )
-      .then(response => {
-        this.setState({ allPhotos: response.data });
-      });
-  }
-
-  editComment(comment, index) {
-    const indexToEdit = { newComment: comment };
-    const editComment = { editComment: comment };
-    axios
-      .editComment(`/api/edit_comment/${this.state.allPhotos[index].id}`, {
-        indexToEdit,
-        editComment
       })
       .then(response => {
         this.setState({ allPhotos: response.data });
       });
   }
-
+  editComment(indexToEdit, index, editedComment) {
+    console.log(indexToEdit, index, editedComment);
+    axios
+      .put(`/api/edit_comment/${index}`, {
+        index: index,
+        indexToEdit: indexToEdit,
+        editedComment: editedComment
+      })
+      .then(response => {
+        this.setState({ allPhotos: response.data });
+      });
+  }
   render() {
     const { allPhotos } = this.state;
-    const { comment } = this.state.comment;
-    const mappedPhotos = allPhotos.map((photo, index) => {
-      //   const myComments = photo.comment.map(c => <Comment comment={c}>)
-
-      //   return (
-      //     <div>
-      //       <AddComment/>
-      //       {myComments}
-      //     </div>
-
+    const mappedPhotos = allPhotos.map(photo => {
       return (
-        <div key={photo.id} className="outer-box">
-          <div className="all-images">
-            <img className="images" src={photo.image} alt="" />
-          </div>
-          <section>
-            <Comments addCommentfn={this.addComment} />
-            <div className="textArea">{/* <TextContainer /> */}</div>
-            <div className="add-comment">
-              <input
-                className="critique-input"
-                placeholder="Lovely Comments Here"
-                value={comment}
-                onChange={e => this.updateText(e.target.value)}
-              />
-            </div>
-            <div className="add-button">
-              <button
-                onClick={() => this.addComment(this.state.comment, index)}
-              >
-                Add Love
-              </button>
-            </div>
-          </section>
-
-          <div className="edit-button">
-            <button onClick={() => this.editComment(this.state.comment, index)}>
-              Edit Love
-            </button>
-          </div>
-          <div className="delete-button">
-            <button
-              onClick={() => this.deleteComment(this.state.comment, index)}
-            >
-              Delete
-            </button>
-          </div>
-        </div>
+        <Photo
+          key={photo.id}
+          id={photo.id}
+          image={photo.image}
+          addCommentFunc={this.addComment}
+          comment={photo.comment}
+          editComment={this.editComment}
+          deleteComment={this.deleteComment}
+        />
       );
     });
-    console.log(this.state.allPhotos);
     return (
       <div className="image-display">
-        <AddComment />
-        <div className="printed-text">{this.state.comment}</div>
         <div>{mappedPhotos}</div>
       </div>
     );

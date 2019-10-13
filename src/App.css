@@ -1,17 +1,8 @@
 .App-Header {
   display: flex;
-
   justify-content: space-around;
 }
 
 .App {
   text-align: center;
 }
-
-/* 
-.image-container {
-  width: 70px;
-}
-.image-container img {
-  width: 200px;
-} */

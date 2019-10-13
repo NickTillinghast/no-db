@@ -2,21 +2,21 @@
   {
     "id": 1,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570586040/No%20Db%20images/kzcogwfgob1gplz1f6fy.jpg",
-    "comment": [],
+    "comment": ["this is a comment", "I kill"],
     "type": "wedding",
     "color": "color"
   },
   {
     "id": 2,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570586033/No%20Db%20images/k7iyhzn73fvcsjhfqqil.jpg",
-    "comment": [],
+    "comment": ["12345"],
     "type": "wedding",
     "color": "color"
   },
   {
     "id": 3,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570586032/No%20Db%20images/ibprup5mwk3vzjddqifp.jpg",
-    "comment": [],
+    "comment": ["blah blah"],
     "type": "wedding",
     "color": "color"
   },
