@@ -1,8 +1,8 @@
 import React from "react";
 import Comment from "../Comment/Comment";
+import "./Photo.css";
 
-// import AddedComment from "../AddedComment/AddedComment";
-
+//==============this component is used to make each photo
 class Photo extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +10,7 @@ class Photo extends React.Component {
       comment: null
     };
   }
+  //
   render() {
     console.log(this.props);
     const { comment } = this.props;
@@ -28,20 +29,32 @@ class Photo extends React.Component {
     return (
       <div className="outer-box">
         <div className="all-images">
-          <input
-            className="input-box"
-            onChange={e => this.setState({ comment: e.target.value })}
-          />
-          <button
-            onClick={() => {
-              this.props.addCommentFunc(this.state.comment, this.props.id);
-            }}
-          >
-            Add Button
-          </button>
-          <img className="images" src={this.props.image} alt="single-images" />
+          <div>
+            <img
+              className="images"
+              src={this.props.image}
+              alt="single-images"
+            />
+          </div>
+          <div>
+            <input
+              className="Add"
+              placeholder="Tell me how you feel"
+              onChange={e => this.setState({ comment: e.target.value })}
+            />
+            <div className="add-button">
+              <button
+                className="button"
+                onClick={() => {
+                  this.props.addCommentFunc(this.state.comment, this.props.id);
+                }}
+              >
+                Add Button
+              </button>
+            </div>
+          </div>
+          {mappedComments}
         </div>
-        {mappedComments}
       </div>
     );
   }
