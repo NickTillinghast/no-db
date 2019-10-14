@@ -1,19 +1,27 @@
 .put-box {
-  height: 25px;
+  height: 30px;
   width: 500px;
   border-radius: 5px;
+  border-color: black;
 }
 .edit {
-  height: 25px;
-  background-color: rgb(234, 241, 241);
+  height: 30px;
+  border-color: black;
+
+  background-color: rgb(255, 255, 255);
   border-radius: 50px;
 }
 .delete {
-  background-color: rgb(227, 239, 241);
+  border-color: black;
+  background-color: rgb(255, 255, 255);
   border-radius: 50px;
 }
 .comment-button {
   display: flex;
   justify-content: center;
   background-color: rgb(255, 255, 255);
+}
+.comment {
+  margin-top: 10px;
+  margin-left: 5px;
 }

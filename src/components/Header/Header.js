@@ -6,12 +6,19 @@ export default class Header extends Component {
   render() {
     return (
       <header className="nav-bar">
-        <h1>Photo Critique</h1>
-        <ul>
-          <li>Website</li>
-          <li>About</li>
-
-          <li className="dropdtn">Rules</li>
+        <div className="Critique-box">
+          <h1>Photo Critique</h1>
+        </div>
+        <ul className="list">
+          <div className="website">
+            <li>Website</li>
+          </div>
+          <div className="about">
+            <li>About</li>
+          </div>
+          <div className="rules">
+            <li className="dropdtn">Rules</li>
+          </div>
         </ul>
       </header>
     );

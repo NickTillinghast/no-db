@@ -13,7 +13,7 @@ export default class Comment extends Component {
   render() {
     return (
       <div className="comment-button">
-        <div>
+        <div className="big-box">
           <input
             className="put-box"
             placeholder="Edit how you feel"
@@ -25,13 +25,13 @@ export default class Comment extends Component {
             className="edit"
             onClick={e =>
               this.props.editComment(
-                this.props.id,
-                this.props.parentComment,
-                this.state.editedComment
+                this.props.id, // props passed in from photo
+                this.props.parentComment, // props passed in from photo
+                this.state.editedComment // updated state
               )
             }
           >
-            Edit Button
+            Adjust Critique
           </button>
         </div>
         <button
@@ -40,10 +40,9 @@ export default class Comment extends Component {
             this.props.deleteComment(this.props.id, this.props.parentComment)
           }
         >
-          Delete Button
+          Remove ;
         </button>
-
-        {this.props.comment}
+        <div className="comment">{this.props.comment}</div>
       </div>
     );
   }

@@ -73,18 +73,18 @@ export default class ImageDisplay extends Component {
     const { allPhotos } = this.state;
     const mappedPhotos = allPhotos.map(photo => {
       return (
-        <Photo
+        <Photo // props passed down to photo component
           key={photo.id}
           id={photo.id}
           image={photo.image}
-          addCommentFunc={this.addComment}
+          addCommentFunc={this.addComment} // add function props
           comment={photo.comment}
-          editComment={this.editComment}
-          deleteComment={this.deleteComment}
+          editComment={this.editComment} // edit function props
+          deleteComment={this.deleteComment} // delete function props
         />
       );
     });
-
+    // display of all api photos
     return (
       <div className="image-display">
         <div>{mappedPhotos}</div>

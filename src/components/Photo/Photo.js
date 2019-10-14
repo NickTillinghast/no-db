@@ -39,7 +39,7 @@ class Photo extends React.Component {
           <div className="add-box">
             <input
               className="Add"
-              placeholder="Tell me how you feel"
+              placeholder="Tell me how this photo makes you feel"
               onChange={e => this.setState({ comment: e.target.value })}
             />
             <div className="add-button">
@@ -49,7 +49,7 @@ class Photo extends React.Component {
                   this.props.addCommentFunc(this.state.comment, this.props.id);
                 }}
               >
-                Add Button
+                Lovely Comment
               </button>
             </div>
           </div>

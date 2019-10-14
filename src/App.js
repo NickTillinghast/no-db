@@ -13,7 +13,9 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <ImageDisplay />
+        <div className="photos">
+          <ImageDisplay />
+        </div>
       </div>
     );
   }
