@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Rules from "../Rules/Rules";
+import About from "../About/About";
+import Website from "../Website/Website";
 import "./Header.css";
 
 // ====================this component displays the header===============
@@ -13,13 +16,22 @@ export default class Header extends Component {
         <div className="list-box">
           <ul className="list">
             <div className="website">
-              <li>Website</li>
+              <li>
+                Website
+                <Website />
+              </li>
             </div>
             <div className="about">
-              <li>About</li>
+              <li>
+                About
+                <About />
+              </li>
             </div>
             <div className="rules">
-              <li className="dropdn">Rules</li>
+              <li className="dropdn">
+                Rules
+                <Rules />
+              </li>
             </div>
           </ul>
         </div>

@@ -41,7 +41,8 @@ export default class ImageDisplay extends Component {
 
       .then(response => {
         this.setState({
-          allPhotos: response.data
+          allPhotos: response.data,
+          comment: ""
         });
       });
   }
@@ -65,7 +66,7 @@ export default class ImageDisplay extends Component {
         editedComment: editedComment
       })
       .then(response => {
-        this.setState({ allPhotos: response.data });
+        this.setState({ allPhotos: response.data, comment: "" });
       });
   }
   //  ================the map here is used to get and display all photos and setup props for the photo component

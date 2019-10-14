@@ -8,14 +8,14 @@
   background-color: rgb(255, 255, 255);
   border-bottom: black solid 2px;
 }
-.Critique-box {
+/* .Critique-box {
   display: flex;
   justify-content: center;
   width: 200px;
   border-radius: 12px;
   padding: 3px;
   background-color: rgb(5, 5, 5);
-}
+} */
 .list-box {
   display: flex;
   justify-content: space-between;
@@ -25,30 +25,25 @@
   justify-content: space-between;
 }
 
-.website {
-  display: flex;
-  justify-content: center;
-  width: 130px;
-  border-radius: 12px;
-  margin: 5px;
-  padding: 3px;
-  background-color: rgb(7, 7, 7);
-}
+.rules,
+.Critique-box,
+.website,
 .about {
   display: flex;
   justify-content: center;
-  width: 100px;
   border-radius: 12px;
   margin: 5px;
-  padding: 3px;
-  background-color: rgb(5, 5, 5);
-}
-.rules {
-  display: flex;
-  justify-content: center;
-  width: 100px;
-  border-radius: 12px;
-  margin: 5px;
-  padding: 3px;
+  padding: 3px 20px;
   background-color: rgb(3, 3, 3);
+  position: relative;
+}
+
+.close-modal {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
