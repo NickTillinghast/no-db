@@ -32,7 +32,7 @@ export default class ImageDisplay extends Component {
       .catch(err => console.log(err));
   }
 
-  // this function adds a comment and is used in the photo component
+  // =======================this function adds a comment and is used in the photo component
   addComment(comment, index) {
     axios
       .post(`/api/add_comment/${index}`, {
@@ -45,7 +45,7 @@ export default class ImageDisplay extends Component {
         });
       });
   }
-  // this function will delete the comment and is used in the comment component
+  // =======================this function will delete the comment and is used in the comment component
   deleteComment(indexToDelete, index) {
     axios
       .delete(`/api/delete_comment/${index}`, {
@@ -55,7 +55,7 @@ export default class ImageDisplay extends Component {
         this.setState({ allPhotos: response.data });
       });
   }
-  // this function will edit and update the comment and is used in the comment component
+  // ==============this function will edit and update the comment and is used in the comment component
   editComment(indexToEdit, index, editedComment) {
     console.log(indexToEdit, index, editedComment);
     axios
@@ -68,7 +68,7 @@ export default class ImageDisplay extends Component {
         this.setState({ allPhotos: response.data });
       });
   }
-  //  the map here is used to get and display all photos and setup props for the photo component
+  //  ================the map here is used to get and display all photos and setup props for the photo component
   render() {
     const { allPhotos } = this.state;
     const mappedPhotos = allPhotos.map(photo => {
@@ -84,7 +84,7 @@ export default class ImageDisplay extends Component {
         />
       );
     });
-    // display all photos
+
     return (
       <div className="image-display">
         <div>{mappedPhotos}</div>

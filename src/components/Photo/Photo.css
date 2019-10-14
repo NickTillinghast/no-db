@@ -1,4 +1,15 @@
 .button {
   background-color: rgb(232, 241, 243);
-  border-radius: 50px;
+  border-radius: 30px;
+}
+.add-box {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+}
+.Add {
+  width: 700px;
+  height: 25px;
+  border-radius: 5px;
 }

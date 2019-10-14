@@ -36,7 +36,7 @@ class Photo extends React.Component {
               alt="single-images"
             />
           </div>
-          <div>
+          <div className="add-box">
             <input
               className="Add"
               placeholder="Tell me how you feel"

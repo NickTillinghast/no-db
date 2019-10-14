@@ -9,6 +9,7 @@ export default class Comment extends Component {
       editedComment: ""
     };
   }
+
   render() {
     return (
       <div className="comment-button">
@@ -19,6 +20,7 @@ export default class Comment extends Component {
             onChange={e => this.setState({ editedComment: e.target.value })}
             value={this.state.editedComment}
           />
+
           <button
             className="edit"
             onClick={e =>
