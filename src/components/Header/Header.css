@@ -1,21 +1,19 @@
 .nav-bar {
-  background-color: rgb(0, 0, 0);
-}
-
-.nav-bar {
   display: flex;
   justify-content: space-around;
   padding: 20px;
   align-items: center;
   font-size: 25px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  border-bottom: black solid;
+}
+.list-box {
+  display: flex;
+  justify-content: space-around;
 }
 .list {
-  width: 25%;
   display: flex;
-
-  justify-content: space-around;
-  align-items: center;
 }
 .Critique-box {
   display: flex;
@@ -23,7 +21,7 @@
   width: 200px;
   border-radius: 12px;
   padding: 3px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(5, 5, 5);
 }
 .website {
   display: flex;
@@ -31,7 +29,7 @@
   width: 130px;
   border-radius: 12px;
   padding: 3px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(7, 7, 7);
 }
 .about {
   display: flex;
@@ -39,7 +37,7 @@
   width: 100px;
   border-radius: 12px;
   padding: 3px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(5, 5, 5);
 }
 .rules {
   display: flex;
@@ -47,5 +45,5 @@
   width: 100px;
   border-radius: 12px;
   padding: 3px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(3, 3, 3);
 }

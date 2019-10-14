@@ -2,21 +2,21 @@
   {
     "id": 1,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570586040/No%20Db%20images/kzcogwfgob1gplz1f6fy.jpg",
-    "comment": ["this is a comment"],
+    "comment": [],
     "type": "wedding",
     "color": "color"
   },
   {
     "id": 2,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570586033/No%20Db%20images/k7iyhzn73fvcsjhfqqil.jpg",
-    "comment": ["12345"],
+    "comment": [],
     "type": "wedding",
     "color": "color"
   },
   {
     "id": 3,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570586032/No%20Db%20images/ibprup5mwk3vzjddqifp.jpg",
-    "comment": ["blah blah"],
+    "comment": ["Vampire wife"],
     "type": "wedding",
     "color": "color"
   },
@@ -51,21 +51,21 @@
   {
     "id": 8,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570724570/No%20Db%20images/dfyfctpqlo32wkfde2zj.jpg",
-    "comment": [],
+    "comment": ["cue the dirty dancing music"],
     "type": "wedding",
     "color": "black and white"
   },
   {
     "id": 9,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570724554/No%20Db%20images/l91kceemizuqx0tw4pzi.jpg",
-    "comment": [],
+    "comment": ["this is my mother in law"],
     "type": "wedding",
     "color": "color"
   },
   {
     "id": 10,
     "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570724560/No%20Db%20images/xcdbudrwknk7wn9tzt1e.jpg",
-    "comment": [],
+    "comment": ["literally 7 degrees outside"],
     "type": "wedding",
     "color": "color"
   },

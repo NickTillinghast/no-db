@@ -1,0 +1,16 @@
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.title-two {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}

@@ -6,7 +6,7 @@ export default class Comment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      editedComment: ""
+      editedComment: "" // state to be updated.
     };
   }
 
@@ -18,7 +18,7 @@ export default class Comment extends Component {
             className="put-box"
             placeholder="Edit how you feel"
             onChange={e => this.setState({ editedComment: e.target.value })}
-            value={this.state.editedComment}
+            // value={this.state.editedComment}
           />
 
           <button
@@ -40,7 +40,7 @@ export default class Comment extends Component {
             this.props.deleteComment(this.props.id, this.props.parentComment)
           }
         >
-          Remove ;
+          Delete Comment
         </button>
         <div className="comment">{this.props.comment}</div>
       </div>

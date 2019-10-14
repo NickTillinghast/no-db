@@ -9,17 +9,20 @@ export default class Header extends Component {
         <div className="Critique-box">
           <h1>Photo Critique</h1>
         </div>
-        <ul className="list">
-          <div className="website">
-            <li>Website</li>
-          </div>
-          <div className="about">
-            <li>About</li>
-          </div>
-          <div className="rules">
-            <li className="dropdtn">Rules</li>
-          </div>
-        </ul>
+
+        <div className="list-box">
+          <ul className="list">
+            <div className="website">
+              <li>Website</li>
+            </div>
+            <div className="about">
+              <li>About</li>
+            </div>
+            <div className="rules">
+              <li className="dropdn">Rules</li>
+            </div>
+          </ul>
+        </div>
       </header>
     );
   }

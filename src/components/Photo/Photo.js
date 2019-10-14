@@ -53,6 +53,7 @@ class Photo extends React.Component {
               </button>
             </div>
           </div>
+
           {mappedComments}
         </div>
       </div>
