@@ -17,7 +17,7 @@ class App extends Component {
 
         <div className="title-box">
           <div className="title">
-            <p>These are my photos I offer for critique.</p>
+            <p>These are the photos I offer for critique.</p>
           </div>
           <div className="title-two">
             <p>Please feel free to comment and share your feedback</p>

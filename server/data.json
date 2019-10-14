@@ -22,8 +22,8 @@
   },
   {
     "id": 4,
-    "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570586036/No%20Db%20images/muw6bf5zsqyv06zrcho2.jpg",
-    "comment": [],
+    "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570724554/No%20Db%20images/l91kceemizuqx0tw4pzi.jpg",
+    "comment": ["my mother in law"],
     "type": "wedding",
     "color": "color"
   },
@@ -57,8 +57,8 @@
   },
   {
     "id": 9,
-    "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570724554/No%20Db%20images/l91kceemizuqx0tw4pzi.jpg",
-    "comment": ["this is my mother in law"],
+    "image": "https://res.cloudinary.com/dqpatwz6c/image/upload/v1570586036/No%20Db%20images/muw6bf5zsqyv06zrcho2.jpg",
+    "comment": [],
     "type": "wedding",
     "color": "color"
   },
