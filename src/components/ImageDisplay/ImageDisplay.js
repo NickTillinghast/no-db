@@ -4,6 +4,7 @@ import axios from "axios";
 import Photo from "../Photo/Photo";
 
 //===========this component will retrieve all images from the cloud and set state and props===========
+
 export default class ImageDisplay extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,9 @@ export default class ImageDisplay extends Component {
   componentDidMount() {
     this.getAllPhotos();
   }
+
   // ===============this gets all my photos from the cloud
+
   getAllPhotos() {
     axios
       .get("/api/all_photos")
@@ -33,6 +36,7 @@ export default class ImageDisplay extends Component {
   }
 
   // =======================this function adds a comment and is used in the photo component
+
   addComment(comment, index) {
     axios
       .post(`/api/add_comment/${index}`, {
@@ -47,6 +51,7 @@ export default class ImageDisplay extends Component {
       });
   }
   // =======================this function will delete the comment and is used in the comment component
+
   deleteComment(indexToDelete, index) {
     axios
       .delete(`/api/delete_comment/${index}`, {
@@ -56,7 +61,9 @@ export default class ImageDisplay extends Component {
         this.setState({ allPhotos: response.data });
       });
   }
+
   // ==============this function will edit and update the comment and is used in the comment component
+
   editComment(indexToEdit, index, editedComment) {
     console.log(indexToEdit, index, editedComment);
     axios
@@ -69,7 +76,9 @@ export default class ImageDisplay extends Component {
         this.setState({ allPhotos: response.data, comment: "" });
       });
   }
+
   //  ================the map here is used to get and display all photos and setup props for the photo component
+
   render() {
     const { allPhotos } = this.state;
     const mappedPhotos = allPhotos.map(photo => {

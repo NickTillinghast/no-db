@@ -14,7 +14,6 @@ class App extends Component {
     return (
       <div className="main">
         <Header />
-
         <div className="title-box">
           <div className="title">
             <p>These are the photos I offer for critique.</p>
@@ -23,7 +22,6 @@ class App extends Component {
             <p>Please feel free to comment and share your feedback</p>
           </div>
         </div>
-
         <div className="photos">
           <ImageDisplay />
         </div>

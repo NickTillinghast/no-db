@@ -8,14 +8,7 @@
   background-color: rgb(255, 255, 255);
   border-bottom: black solid 2px;
 }
-/* .Critique-box {
-  display: flex;
-  justify-content: center;
-  width: 200px;
-  border-radius: 12px;
-  padding: 3px;
-  background-color: rgb(5, 5, 5);
-} */
+
 .list-box {
   display: flex;
   justify-content: space-between;
